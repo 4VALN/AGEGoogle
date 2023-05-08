@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction(){
+            const age = document.getElementById('bilang').value;
+            let gio =" ";
+            const output=document.getElementById('msgOutput')
+            if(age<25){
+        gio += "They're "+age+"  Years Old and they're younger than google";
+    }
+    else if(age==25){
+        gio += "They're "+age+"  Years Old and they're as old as google";
+    }
+    else if(age>25){
+        gio += "They're "+age+" Years Old and they're older than google";
+    }
+    else{
+        alert("input invalid")
+    }
+
+            output.style.display='block';
+            output.innerHTML = gio;
+        }
+    </script>
+    <style>
+        body{
+            background-image: url('OIP.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>ENTER THE AGE OF YOUR FAVORITE ARTIST</h1>
+    <section>
+        <h2>NOTES</h2>
+        <ul>
+            <li>WILLIAM ANGELO C. NAVACILLA</li>
+            <li>BSIT 3.2C</li>
+            <li>PRESS CONFIRM </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ENTER THE AGE BELOW:  </h2>
+        <label>  AGE:   <input type="text" id="bilang"></label>
+        <input type="button" value="CONFIRM!" onclick="myFunction()">
+        <h1 style="display:none" id="msgOutput"></h1>
+    </section>
+</body>
+</html>
